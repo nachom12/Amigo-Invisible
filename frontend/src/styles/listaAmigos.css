@@ -1,0 +1,29 @@
+.lista {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 50%;
+    margin-right: 10px;
+
+}
+
+.lista > button { 
+    color: yellow;
+    background-color: teal;
+    border-radius: 5px 0px 5px 0px;
+    padding: 5px;
+    outline: none;
+}
+
+.lista::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+.lista::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.lista::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
