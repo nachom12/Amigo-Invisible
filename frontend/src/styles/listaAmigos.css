@@ -4,8 +4,10 @@
     margin-left: auto;
     width: 50%;
     margin-right: 10px;
-
+    overflow: auto;
 }
+
+
 
 .lista > button { 
     color: yellow;
@@ -15,15 +17,11 @@
     outline: none;
 }
 
-.lista::-webkit-scrollbar {
-    width: 10px;
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
 }
-/* Track */
-.lista::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-.lista::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
+.table-wrapper-scroll-y {
+    display: block;
 }

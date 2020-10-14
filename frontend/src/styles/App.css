@@ -10,6 +10,9 @@
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
+    flex-wrap: wrap;
+    /* height: 200px; */
+    /* max-height: 200px; */
 }
 
 .resultados__container {

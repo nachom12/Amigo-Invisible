@@ -1,39 +1,30 @@
 import React from 'react';
-import '../styles/listaAmigos.css'
+import RowAmigo from './rowAmigo';
+import '../styles/listaAmigos.css';
 
-
-
-const ListaAmigos = () => (
-    <div className="lista">
+const ListaAmigos = ({amigos, funcionDeMatch, escribirResultado}) => { 
+     
+    return(
+        <div className="lista">
         <h3>Participantes : </h3>
-        <table class="table table-striped">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-bordered table-striped mb-0">
             <thead>
                 <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">mail</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dato</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>nacho</td>
-                <td>jmedina@</td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>albert</td>
-                <td>acruzdg@</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>adolfo</td>
-                <td>adolfopz@</td>
-                </tr>
+                {amigos.map( (amigo) => <RowAmigo num={amigo.num} nombre={amigo.nombre} dato={amigo.dato} key={amigo.num}/> )}
             </tbody>
         </table>
-        <button>Terminar inscripciones</button>
-    </div>
-);
+
+        </div>
+            <button onClick={ () => (escribirResultado(funcionDeMatch(amigos)))}>Terminar inscripciones</button>
+        </div>
+    );
+};
 
 export default ListaAmigos;

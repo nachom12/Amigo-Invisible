@@ -1,11 +1,24 @@
 import React from 'react';
 import '../styles/ingresoAmigos.css';
+// import ListaAmigos from './listaAmigos';
 
-const IngresoAmigos = () => (
+const IngresoAmigos = ({listaActual, handlerAmigos}) => (
     <div className="formAmigo">
-        <input className="inputData" placeholder="Nombre"></input>
-        <input className="inputData" placeholder="Mail"></input>
-        <button>Ingreso</button>
+        <input className="inputData" id="nombreAmigo" placeholder="Nombre"></input>
+        <input className="inputData" id="mailAmigo" placeholder="Mail"></input>
+        
+        <button type="button" 
+            onClick= { () => handlerAmigos([
+                {
+                    num:listaActual.length+1, 
+                    nombre: document.getElementById("nombreAmigo").value, 
+                    dato:document.getElementById("mailAmigo").value}, 
+                    ...listaActual
+                ])}
+        >
+            
+            Ingreso
+        </button>
     </div>
 );
 

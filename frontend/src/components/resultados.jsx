@@ -1,29 +1,19 @@
 import React from 'react';
 import '../styles/resultados.css'
+import RowResultado from '../components/rowResultado';
 
-const Resultados = () => (
+const Resultados = ({resultados}) => (
     <div className="resultados">
         <h3>Resultados:</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
-                <th scope="col">Regalante</th>
-                <th scope="col">Regalado</th>
+                <th scope="col">Jugador</th>
+                <th scope="col">Amigo Invisible</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">nacho</th>
-                <td>adolfo</td>
-                </tr>
-                <tr>
-                <th scope="row">adolfo</th>
-                <td>albert</td>
-                </tr>
-                <tr>
-                <th scope="row">albert</th>
-                <td>nacho</td>
-                </tr>
+                {resultados.map( (resultado) =>  <RowResultado jugador={resultado.jugador} amigoInvisible={resultado.amigo} />)}                
             </tbody>
         </table>
     </div>
