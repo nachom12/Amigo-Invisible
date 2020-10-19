@@ -1,0 +1,15 @@
+.botonArmadoJuego{
+    color: white;
+    background-color: #2a9d8f;
+    border-radius: 5px 0px 5px 0px;
+    padding: 5px;
+    outline: none;
+    animation-name: btnArmadoAparece; 
+    animation-duration: 1s; 
+    animation-timing-function: ease-in;
+}
+
+@keyframes btnArmadoAparece {
+    from {width: 30%; opacity: 0.1;}
+    to {width: 100%; opacity: 1;}
+}

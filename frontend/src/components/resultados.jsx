@@ -13,7 +13,7 @@ const Resultados = ({resultados}) => (
                 </tr>
             </thead>
             <tbody>
-                {resultados.map( (resultado) =>  <RowResultado jugador={resultado.jugador} amigoInvisible={resultado.amigo} />)}                
+                {resultados.map( (resultado) =>  <RowResultado jugador={resultado.jugador} amigoInvisible={resultado.amigo} />)}
             </tbody>
         </table>
     </div>

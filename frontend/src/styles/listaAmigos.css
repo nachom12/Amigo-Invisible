@@ -7,14 +7,14 @@
     overflow: auto;
 }
 
-
-
-.lista > button { 
-    color: yellow;
-    background-color: teal;
+.mybutton { 
+    color: white;
+    background-color: #2a9d8f;
     border-radius: 5px 0px 5px 0px;
     padding: 5px;
     outline: none;
+    animation-name: aparicion; 
+    animation-duration: 3s;
 }
 
 .my-custom-scrollbar {
@@ -24,4 +24,33 @@
 }
 .table-wrapper-scroll-y {
     display: block;
+}
+
+td {
+    color: black;
+    opacity: 1;
+    animation-name: entrada;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+th {
+    color: black;
+    opacity: 1;
+    animation-name: entrada;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes entrada {
+  from {color: black; opacity: 0.3;}
+  to {color: black; opacity: 1;}
+}
+
+@keyframes aparicion {
+    from {opacity: 0.1; width: 10%};
+    to {opacity: 1; width: 100%} 
 }

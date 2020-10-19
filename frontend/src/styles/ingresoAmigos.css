@@ -6,7 +6,6 @@
     padding: 20px 20px;
     border: 1px solid white;
     border-radius: 10px;
-    
 }
 
 
@@ -21,14 +20,21 @@
     text-align: center;
     width: 300px;
     max-width: 300px;
+    /* animation-name: borderBottom; */
+    
+    transition: 2s;
 }
 
-.formAmigo > button {
+@keyframes borderBottom {
+    from { background: yellowgreen; opacity: 0.2;}
+    to {background: yellowgreen; opacity: 1;}
+}
+
+.mybutton {
     margin-top: 5px;
-    color: yellow;
-    background-color: teal;
+    color: white;
+    background-color:#2a9d8f;
     border-radius: 5px 0px 5px 0px;
-    /* border: none; */
     width: 300px;
     max-width: 300px;
     padding: 5px;

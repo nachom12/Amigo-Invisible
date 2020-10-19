@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/rowAmigo.css';
 
 const RowAmigo = ({num, nombre , dato}) => (
     <tr>
